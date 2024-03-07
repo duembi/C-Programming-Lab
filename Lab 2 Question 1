@@ -2,7 +2,7 @@
 
 int main(){
 	
-	int i, j, x, y;
+	int x;
 	int min, max;
 	
 	printf("Enter a sequence of integers (enter 0 to stop): ");
@@ -31,7 +31,7 @@ int main(){
 	}
 
 	
-	printf("The smallest number entered is: %d \n The largest number entered is: %d ", min, max);	
+	printf("The smallest number entered is: %d \nThe largest number entered is: %d ", min, max);	
 	
 	return 0;
 }
