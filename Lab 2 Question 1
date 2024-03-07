@@ -1,0 +1,37 @@
+#include<stdio.h>
+
+int main(){
+	
+	int i, j, x, y;
+	int min, max;
+	
+	printf("Enter a sequence of integers (enter 0 to stop): ");
+	scanf("%d", &x);
+
+	
+	if(x == 0){
+		printf("\nNo numbers were entered !\n");
+		return 0;	
+	} 
+	
+	max = x;
+	min = x;
+	
+	while(x != 0){
+		
+		if(x < min){
+			min = x;
+		}
+		
+		if(x > max){
+			max = x;	
+		}			
+		
+		scanf("%d", &x);			
+	}
+
+	
+	printf("The smallest number entered is: %d \n The largest number entered is: %d ", min, max);	
+	
+	return 0;
+}
