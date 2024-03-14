@@ -2,7 +2,7 @@
  
 int main(){
 
-	int i, j, x, y, temp, new_number = 0;
+	int x, y, temp, new_number = 0;
 	
 	printf("Please enter a number : ");
 	scanf("%d", &x);
