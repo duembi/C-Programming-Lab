@@ -1,0 +1,32 @@
+#include<stdio.h>
+
+int main(){
+	
+	int x, num, temp, sum;
+	temp = 0, sum = 0;
+	
+	printf("Please enter a number : ");
+	scanf("%d", &num);
+	temp = num;
+	
+	while(num > 0){
+		
+		sum = sum + (num % 10);
+		
+		num = num / 10;
+	}
+	
+	printf("Sum of the number is %d", sum);
+	
+	if(temp % sum == 0){
+		
+		printf("\n%d is a harshad number", temp);
+		
+	}
+	else{
+		
+		printf("\n%d is not a harshad number !", temp);
+	
+	}
+	
+}
