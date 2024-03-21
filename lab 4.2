@@ -1,0 +1,99 @@
+#include<stdio.h>
+
+void get_input(int numbers[], int size){
+
+	int i=0;
+	printf("Please enter values of elemetns of array :");
+	
+	for(i=0; i<size; i++){
+	
+		scanf("%d", &numbers[i]);
+		
+	}
+	
+}
+
+void print_input(int numbers[], int size){
+
+	int i=0;
+	printf("\nThe values of elements of array : ");
+	
+	for(i=0; i<size; i++){
+	
+		printf("%d ", numbers[i]);
+	
+	}
+	
+}
+
+void print_prime(int numbers[], int size){
+	
+	int i ,j , prime;
+	printf("\nPrime numbers : ");
+	
+	for(i=0; i<size; i++){
+	
+		for(j=2; j<numbers[i]; j++){
+			
+			if(numbers[i]%j != 0){
+			
+				printf("%d ", numbers[i]);
+				
+				break;
+			}
+		
+		}
+		
+	}
+	
+}
+
+void print_odd_number(int numbers[], int size){
+	
+	int i;
+	printf("\nOdd numbers : ");
+		
+	for(i=0; i<size; i++){
+	
+		if(numbers[i]%2 == 1){
+			
+			printf("%d ", numbers[i]);
+		
+		}
+	
+	}
+
+}		
+
+void print_even_number(int numbers[], int size){
+	
+	int i;
+	printf("\nEven numbers : ");
+	
+	for(i=0; i<size; i++){
+	
+		if(numbers[i]%2 == 0){
+			
+			printf("%d ", numbers[i]);
+		
+		}
+	}
+}	
+
+
+
+int main(){
+
+	int size;
+	
+	printf("Please enter size value : ");
+	scanf("%d", &size);
+	int numbers[size];
+
+	get_input(numbers, size);
+	print_input(numbers, size);
+	print_odd_number(numbers, size);
+	print_even_number(numbers, size);
+	print_prime(numbers, size);
+	return 0;
+}
