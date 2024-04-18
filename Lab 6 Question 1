@@ -1,0 +1,64 @@
+#include<stdio.h>
+
+void convert(int array[], int rows, int cols){
+	
+	int p,i,j,x,a,b,k;
+	x = rows*cols;
+	a = rows;
+	b = cols;
+	k = 0;
+	int arr2[rows][cols];
+
+	for(i=0; i<a; i++){
+
+		for(j=0; j<b; j++){
+
+			arr2[i][j] = array[k];
+
+			k++;
+		}
+	}
+
+	for(i=0; i<a; i++){
+
+		for(j=0; j<b; j++){
+
+			printf("%5d",arr2[i][j]);
+
+		}
+		printf("\n");
+	
+	}
+
+}
+
+
+int  main(){
+
+	int rows, cols, i,x ;
+
+	printf("please enter numbers of rows and columns: ");
+	scanf("%d %d", &rows, &cols);
+	
+	printf("\nrow = %d, cols = %d", rows, cols);
+
+	x= rows*cols;
+	int arr[x];
+	printf("\nplesae enter arr numbers ");
+	
+	for(i=0; i<x; i++){
+
+		scanf("%d", &arr[i]);	
+
+	}
+
+	for(i=0; i<x; i++){
+	
+		printf("%d\n", arr[i]);	
+
+	}
+	
+	convert (arr, rows, cols);
+
+
+}
