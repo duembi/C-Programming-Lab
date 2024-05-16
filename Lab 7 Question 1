@@ -1,0 +1,48 @@
+#include<stdio.h>
+
+struct Shape{
+	
+	char shapen[10];
+	float first_edge;
+	float second_edge;
+	float area;
+};
+
+
+int main(){
+	
+	struct Shape x;
+	
+	printf("Please enter shapen type : ");
+	scanf("%c", &x.shapen);
+	if(*x.shapen =! 't' || 'r'){
+		
+		printf("Please enter a valid char !!");
+		
+	}
+	else {
+	
+	printf("Please enter first edge :");
+	scanf("%f", &x.first_edge);
+	
+	printf("Please enter second edge : ");
+	scanf("%f", &x.second_edge);
+	
+	if(*x.shapen == 't'){
+		
+		x.area = ((x.first_edge * x.second_edge)/2);
+			printf("Area of the %c : %f", x.shapen, x.area);
+			
+	}
+	else if(*x.shapen == 'r'){
+		x.area = (x.first_edge) * (x.second_edge);
+		printf("Area of the %c : %f", x.shapen, x.area);
+
+	}
+	
+		
+	
+	}
+
+	
+	}
