@@ -1,0 +1,37 @@
+#include<stdio.h>
+
+struct Student{
+	char name[100];
+	int midterm;
+	int final;
+	int passingGrade;
+	
+};
+
+int main(){
+	
+	struct Student x;
+	
+	printf("Please enter student name :");
+	scanf("%s", &x.name);
+	
+	printf("Please enter midterm grade : ");
+	scanf("%d", &x.midterm);
+	
+	printf("Please enter final grade : ");
+	scanf("%d", &x.final);
+	
+	x.passingGrade = x.midterm*0.4 + x.final*0.6;
+	
+	if(x.passingGrade >= 60){
+		
+		printf("%s pass and grade %d", x.name, x.passingGrade);
+		
+	}
+	else{
+		
+		printf("%s fails and grade %d", x.name, x.passingGrade);
+		
+	}
+	
+}
