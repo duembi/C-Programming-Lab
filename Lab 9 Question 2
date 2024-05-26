@@ -1,0 +1,37 @@
+#include<stdio.h>
+
+int main(){
+	
+	FILE *inputptr, *outputptr;
+	int x, temp, sum = 0;
+	
+	inputptr = fopen("input_lab2.txt", "r");
+	outputptr = fopen("output_lab2.txt", "w");
+	
+	 if (inputptr == NULL || outputptr == NULL) {
+        printf("File opening error !");
+    }
+	
+	fscanf(inputptr, "%d", &x);
+	printf("x = %d", x);
+	temp = x;
+	
+	while(temp > 0){
+		
+		sum = sum * 10 + (temp % 10); 
+		temp = temp / 10;
+		
+	}
+	
+	if(sum == x){
+		
+		fprintf(outputptr, "%d is palindrom.", x);
+		
+	}
+	else{
+		fprintf(outputptr, "%d is not palindrom.", x);
+	}
+	
+	fclose(inputptr);
+	fclose(outputptr);
+}
