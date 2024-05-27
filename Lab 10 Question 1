@@ -1,0 +1,25 @@
+#include<stdio.h>
+
+int main(){
+	
+	int mt1, mt2, final, mark;
+	char name[30];
+	
+	FILE *inputptr, *outputptr;
+	
+	inputptr = fopen("input.txt", "r");
+	outputptr = fopen("output.txt", "w");
+	
+	while(fscanf(inputptr, "%s %d %d %d", &name, &mt1, &mt2, &final) != EOF){
+		
+		mark = (mt1 * 0.25)+ (mt2 * 0.25)+ (final * 0.50);
+		
+		fprintf(outputptr, "%s's mark is %d\n", name, mark);
+		
+	}
+	
+	fclose(inputptr);
+	fclose(outputptr);
+	
+	
+}
